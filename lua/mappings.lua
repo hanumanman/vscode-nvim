@@ -31,6 +31,10 @@ map("n", "gd", function()
 	vscode.action("editor.action.revealDefinition")
 end)
 
+map("n", "gt", function()
+	vscode.action("editor.action.peekTypeDefinition")
+end)
+
 map("n", "<leader>ca", function()
 	vscode.action("editor.action.quickFix")
 end)
