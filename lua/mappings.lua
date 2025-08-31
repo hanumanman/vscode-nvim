@@ -43,6 +43,14 @@ map("n", "[d", function()
 	vscode.action("editor.action.marker.prev")
 end)
 
+map("n", "<leader>ds", function()
+	vscode.action("workbench.action.gotoSymbol")
+end)
+
+map("n", "<leader>dw", function()
+	vscode.action("search.action.openNewEditor")
+end)
+
 -- File explorer
 map("n", ",", function()
 	vscode.action("workbench.view.explorer")
