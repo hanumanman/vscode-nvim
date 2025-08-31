@@ -32,7 +32,11 @@ map("n", "gd", function()
 end)
 
 map("n", "<leader>ca", function()
-	vscode.action("editor.action.sourceAction")
+	vscode.action("editor.action.quickFix")
+end)
+
+map("n", "<leader>rn", function()
+	vscode.action("editor.action.rename")
 end)
 
 map("n", "]d", function()
