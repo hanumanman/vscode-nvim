@@ -14,7 +14,7 @@ map("n", "<leader>s", function()
 	vscode.action("workbench.action.quickOpen")
 end)
 
-map("n", "<leader>a", function()
+map({ "n", "v" }, "<leader>a", function()
 	vscode.action("workbench.action.showCommands")
 end)
 
@@ -22,7 +22,7 @@ map("n", "<leader>z", function()
 	vscode.action("workbench.action.toggleZenMode")
 end)
 
-map("n", "<leader>ii", function()
+map({ "v", "n" }, "<leader>ii", function()
 	vscode.action("inlineChat.start")
 end)
 
