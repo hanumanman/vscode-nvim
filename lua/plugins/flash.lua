@@ -8,9 +8,9 @@ return {
 			end
 		end
 
-		set_highlights({ "FlashCurrent" }, { fg = "#D4D4D4", bg = "#569CD6", bold = true })
-		set_highlights({ "FlashMatch" }, { fg = "#4EC9B0", bg = "#1E1E1E", bold = true })
-		set_highlights({ "FlashLabel" }, { fg = "#D4D4D4", bg = "#007ACC", bold = true })
+		set_highlights({ "FlashCurrent" }, { fg = "#d4be98", bg = "none", bold = true })
+		set_highlights({ "FlashMatch" }, { fg = "#d8a657", bg = "none", bold = true })
+		set_highlights({ "FlashLabel" }, { fg = "#282828", bg = "#ea6962", bold = true })
 	end,
 	opts = {},
   -- stylua: ignore
