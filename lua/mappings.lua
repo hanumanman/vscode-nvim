@@ -2,10 +2,12 @@ local vscode = require("vscode")
 local map = vim.keymap.set
 
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
+map("n", "vie", "ggVG", { desc = "Select all" })
+map("n", "cie", "ggcG", { desc = "Change all" })
+map("n", "die", "ggdG", { desc = "Change all" })
 
 -- VSCode API mappings
 -- Utils
-
 map("n", "<leader>f", function()
 	vscode.action("workbench.action.files.save")
 end)
@@ -24,6 +26,11 @@ end)
 
 map({ "v", "n" }, "<leader>ii", function()
 	vscode.action("inlineChat.start")
+end)
+
+-- Git
+map({ "v", "n" }, "<leader>hr", function()
+	vscode.action("git.revertSelectedRanges")
 end)
 
 -- Lsp
