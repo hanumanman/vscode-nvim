@@ -38,6 +38,10 @@ map("n", "gd", function()
 	vscode.action("editor.action.revealDefinition")
 end)
 
+map("n", "gr", function()
+	vscode.action("editor.action.goToReferences")
+end)
+
 map("n", "gt", function()
 	vscode.action("editor.action.peekTypeDefinition")
 end)
