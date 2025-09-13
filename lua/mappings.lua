@@ -42,6 +42,14 @@ map({ "v", "n" }, "<leader>hr", function()
 	})
 end)
 
+map("n", "]c", function()
+	vscode.action("workbench.action.editor.nextChange")
+end)
+
+map("n", "[c", function()
+	vscode.action("workbench.action.editor.previousChange")
+end)
+
 -- Lsp
 map("n", "gd", function()
 	vscode.action("editor.action.revealDefinition")
