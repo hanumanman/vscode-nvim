@@ -30,7 +30,16 @@ end)
 
 -- Git
 map({ "v", "n" }, "<leader>hr", function()
-	vscode.action("git.revertSelectedRanges")
+	vscode.action("git.revertSelectedRanges", {
+		callback = function(err)
+			if err == nil then
+				-- Center the screen after the VSCode action completes
+				vim.schedule(function()
+					vim.api.nvim_input("zz")
+				end)
+			end
+		end,
+	})
 end)
 
 -- Lsp
