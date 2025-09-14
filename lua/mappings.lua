@@ -44,6 +44,7 @@ end)
 
 map("n", "]c", function()
 	vscode.action("workbench.action.editor.nextChange")
+	vscode.action("workbench.action.compareEditor.nextChange")
 end)
 
 map("n", "[c", function()
@@ -63,7 +64,7 @@ map("n", "gt", function()
 	vscode.action("editor.action.peekTypeDefinition")
 end)
 
-map("n", "<leader>ca", function()
+map({ "n", "v" }, "<leader>ca", function()
 	vscode.action("editor.action.quickFix")
 end)
 
