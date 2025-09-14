@@ -33,13 +33,21 @@ map({ "v", "n" }, "<leader>hr", function()
 	vscode.action("git.revertSelectedRanges", {
 		callback = function(err)
 			if err == nil then
-				-- Center the screen after the VSCode action completes
 				vim.schedule(function()
+					-- Center the screen after
 					vim.api.nvim_input("zz")
 				end)
 			end
 		end,
 	})
+end)
+
+map("n", "<leader>hs", function()
+	vscode.action("git.stageSelectedRanges")
+end)
+
+map("n", "<leader>ha", function()
+	vscode.action("git.stageAll")
 end)
 
 map("n", "]c", function()
@@ -105,6 +113,14 @@ end)
 
 map("n", "H", function()
 	vscode.action("workbench.action.previousEditorInGroup")
+end)
+
+map("n", "<C-H>", function()
+	vscode.action("workbench.action.moveEditorLeftInGroup")
+end)
+
+map("n", "<C-L>", function()
+	vscode.action("workbench.action.moveEditorRightInGroup")
 end)
 
 map("n", "<leader>db", function()
