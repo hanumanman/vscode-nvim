@@ -46,22 +46,38 @@ map({ "v", "n" }, "<leader>hr", function()
 	})
 end, { desc = "Revert selected changes" })
 
+map("n", "<leader>g", function()
+	vscode.action("workbench.view.scm")
+end, { desc = "Open git explorer" })
+
 map("n", "<leader>hs", function()
 	vscode.action("git.stageSelectedRanges")
-end, { desc = "Stage selected changes" })
+end, { desc = "Git: Stage selected changes" })
+
+map("n", "<leader>hc", function()
+	vscode.action("git.commit")
+end, { desc = "Git: Commit" })
+
+map("n", "<leader>hl", function()
+	vscode.action("git.commitAll")
+end, { desc = "Git: Stage all changes and commit" })
 
 map("n", "<leader>ha", function()
 	vscode.action("git.stageAll")
-end, { desc = "Stage all changes" })
+end, { desc = "Git: Stage all changes" })
+
+map("n", "<leader>hp", function()
+	vscode.action("git.push")
+end, { desc = "Git: Push" })
 
 map("n", "]c", function()
 	vscode.action("workbench.action.editor.nextChange")
 	vscode.action("workbench.action.compareEditor.nextChange")
-end, { desc = "Go to next change" })
+end, { desc = "Git: Go to next change" })
 
 map("n", "[c", function()
 	vscode.action("workbench.action.editor.previousChange")
-end, { desc = "Go to previous change" })
+end, { desc = "Git: Go to previous change" })
 
 -- Lsp
 map("n", "gd", function()
