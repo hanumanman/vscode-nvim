@@ -46,14 +46,11 @@ map({ "v", "n" }, "<leader>hr", function()
 	})
 end, { desc = "Revert selected changes" })
 
-map("n", "<leader>hg", function()
-	vscode.action("workbench.action.terminal.sendSequence", {
-		args = { text = "lazygit\n" },
-	})
-	vscode.action("workbench.action.terminal.focus")
+map("n", "<leader>g", function()
+	vscode.action("lazygit-vscode.toggle")
 end, { desc = "Git: Open Lazygit" })
 
-map("n", "<leader>g", function()
+map("n", "<leader>hg", function()
 	vscode.action("workbench.view.scm")
 end, { desc = "Open git explorer" })
 
