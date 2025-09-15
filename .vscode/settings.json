@@ -1,3 +1,4 @@
 {
-  "Lua.diagnostics.globals": ["love", "vim"]
+  "Lua.diagnostics.globals": ["love", "vim"],
+  "stylua.targetReleaseVersion": "latest"
 }
