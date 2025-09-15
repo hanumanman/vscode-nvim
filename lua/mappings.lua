@@ -50,7 +50,7 @@ map("n", "<leader>g", function()
 	vscode.action("workbench.view.scm")
 end, { desc = "Open git explorer" })
 
-map("n", "<leader>hs", function()
+map("v", "<leader>hs", function()
 	vscode.action("git.stageSelectedRanges")
 end, { desc = "Git: Stage selected changes" })
 
@@ -67,6 +67,10 @@ map("n", "<leader>ha", function()
 end, { desc = "Git: Stage all changes" })
 
 map("n", "<leader>hp", function()
+	vscode.action("git.pull")
+end, { desc = "Git: Pull" })
+
+map("n", "<leader>hP", function()
 	vscode.action("git.push")
 end, { desc = "Git: Push" })
 
