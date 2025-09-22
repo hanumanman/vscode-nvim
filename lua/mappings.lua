@@ -4,7 +4,8 @@ local map = vim.keymap.set
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
 map("n", "vie", "ggVG", { desc = "Select all" })
 map("n", "cie", "ggcG", { desc = "Change all" })
-map("n", "die", "ggdG", { desc = "Change all" })
+map("n", "die", "ggdG", { desc = "Delete all" })
+map("n", "yie", "ggyG", { desc = "Yank all" })
 
 -- VSCode API mappings
 -- Utils
